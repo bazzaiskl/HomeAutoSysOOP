@@ -1,4 +1,7 @@
+#ifndef APPLIANCE_H
+#define APPLIANCE_H
 
+#include <string>
 
 class appliance{
 
@@ -14,3 +17,4 @@ appliance();
  virtual void onOff(bool state) = 0;
 
 };
+#endif
