@@ -8,17 +8,17 @@ using namespace std;
 class appliance{
 
 //constructors
-appliance();
+
 
 
 //state
-protected:
+public:
     string name;
     string location;
     static int currentID;
     int id;
 
-public:
+
 //behviour
     //pure vitruals
     virtual void onOff(bool state) = 0;
@@ -30,6 +30,7 @@ public:
     void setLocation(string nLocation);
     void setName(string nName);
 
+    appliance();
 
 };
 #endif
