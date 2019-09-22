@@ -1,12 +1,20 @@
 #include <iostream>
+#include "appliance.h"
+//#include <vector>
 
 
 using namespace std;
-extern string read();
+extern void read(string* name, string* function);
 
 int main(){
+string* name = new string();
+string* function = new string();
 
-cout<< read()<<endl;
+//sappliance* list = new appliance(10);
+
+read(name, function);
+
+cout<< *name << " to " << *function<< endl;
 
 	
 }

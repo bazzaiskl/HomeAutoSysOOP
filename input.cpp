@@ -3,11 +3,16 @@
 
 using namespace std;
 
-string read(){
-string in;
- cin >> in;
+void read(string* name, string* function){
+ cout<<"Please enter name of object"<<endl;
+ cin >> *name;
 
- return in;
+ cout<<"please enter the function"<<endl;
+ cin >> *function;
+
 }
+
+
+
 
 
