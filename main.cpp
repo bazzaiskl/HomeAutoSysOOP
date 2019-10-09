@@ -6,10 +6,9 @@
 using namespace std;
 
 extern void read(string* name, string* function);
+extern void selector();
 
 int main(){
-string* name = new string();
-string* function = new string();
 
 heater warmer();
 //heater* warmerP = &warmer;
@@ -23,9 +22,8 @@ light litBro();
 
 
 
-read(name, function);
+selector();
 
-cout<< *name << " to " << *function<< endl;
 
 	
 }
