@@ -18,9 +18,10 @@ light lamp();
 
 
 
-vector<appliance> list;
+vector<appliance*> list;
 
-//list.push_back(  ->hot ());
+list.push_back(new heater());
+list.push_back(new light());
 
 vector<int> pop;
 pop.push_back(1);
