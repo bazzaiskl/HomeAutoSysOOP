@@ -5,7 +5,7 @@
 #include <string>
 #include "appliance.h"
 
-class light:appliance
+class light: public appliance
 {
 public:
 	light();

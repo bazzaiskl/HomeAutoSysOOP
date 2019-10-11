@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "appliance.h"
-class heater:appliance
+class heater: public appliance
 {
 public:
 	heater();

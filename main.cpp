@@ -13,12 +13,17 @@ int main(){
 heater warmer();
 //heater* warmerP = &warmer;
 
-light litBro();
+heater* hot = new heater();
+light lamp();
 
 
 
-//appliance* list = new appliance[10];
-vector<appliance> list = {warmer, litBro};
+vector<appliance> list;
+
+//list.push_back(  ->hot ());
+
+vector<int> pop;
+pop.push_back(1);
 
 
 //selector(list);
