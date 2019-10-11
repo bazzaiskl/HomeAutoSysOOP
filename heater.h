@@ -1,13 +1,13 @@
-#ifndef HEATER_H
 #define HEATER_H
 
-#include "appliance.h"
+#include <iostream>
 
-class heater: public appliance {
-    public:
-    heater();
-    
-    virtual void onOff(bool state);
+class heater
+{
+public:
+	heater();
+	heater(int getTemp);
+	int temp;
+
+
 };
-
-#endif

@@ -1,9 +1,15 @@
+#include<iostream>
 #include "heater.h"
 
-heater::heater(): appliance(){
-    
+heater::heater()
+{
+	temp = 20;
 }
 
- void heater::onOff(bool state){
+heater::heater(int getTemp)
+{
 
- }
+	temp = getTemp;
+	std::cout<<"The heater tempreture is setted "<<temp<<std::endl;
+	
+}

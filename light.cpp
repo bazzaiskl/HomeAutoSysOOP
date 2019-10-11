@@ -1,9 +1,19 @@
+#include <iostream>
 #include "light.h"
 
-light::light():appliance(){
-    
+light::light()
+{
+	color = "?";
+	brightness = 0;
 }
 
- void light::onOff(bool state){
+light::light(int getBrightness, char* getColor)
+{
+	color = getColor;
+	brightness = getBrightness;
+	
+	std::cout<<"The light color is setted "<< color;
+	std::cout<<" The light brightness is setted"<<brightness<<std::endl;
+}
 
- }
+

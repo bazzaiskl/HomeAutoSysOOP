@@ -1,13 +1,19 @@
-#ifndef LIGHT_H
 #define LIGHT_H
 
-#include "appliance.h"
 
-class light:public appliance {
-    public:
-    light();
+#include <iostream>
+#include <string>
 
-    virtual void onOff(bool state);
+class light
+{
+public:
+	light();
+
+	light(int getBrightness, char* getColor);
+	std::string color;
+	int brightness;
 };
 
-#endif
+
+
+
