@@ -13,3 +13,7 @@ heater::heater(int getTemp)
 	std::cout<<"The heater tempreture is setted "<<temp<<std::endl;
 	
 }
+
+void heater::onOff(bool state){
+	cout<<"onOff called"<<endl;
+}

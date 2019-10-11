@@ -16,4 +16,8 @@ light::light(int getBrightness, char* getColor)
 	std::cout<<" The light brightness is setted"<<brightness<<std::endl;
 }
 
+void light::onOff(bool state){
+    cout<<"onOff called"<<endl;
+}
+
 

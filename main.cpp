@@ -18,7 +18,7 @@ light litBro();
 
 
 //appliance* list = new appliance[10];
-//vector<appliance> list = {};
+vector<appliance> list = {warmer, litBro};
 
 
 //selector(list);
