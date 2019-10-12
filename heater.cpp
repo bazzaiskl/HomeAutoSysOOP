@@ -4,6 +4,7 @@
 heater::heater()
 {
 	temp = 20;
+	name = "?";
 }
 
 heater::heater(int getTemp)
@@ -17,3 +18,4 @@ heater::heater(int getTemp)
 void heater::onOff(bool state){
 	cout<<"onOff called"<<endl;
 }
+

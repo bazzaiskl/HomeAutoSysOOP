@@ -6,7 +6,7 @@
 using namespace std;
 
 extern void read(string* name, string* function);
-extern void selector(vector<appliance> list);
+extern void selector(vector<appliance*> list);
 
 int main(){
 
@@ -27,7 +27,7 @@ vector<int> pop;
 pop.push_back(1);
 
 
-//selector(list);
+selector(list);
 
 
 	

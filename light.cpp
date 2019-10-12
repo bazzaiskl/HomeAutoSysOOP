@@ -5,6 +5,7 @@ light::light()
 {
 	color = "?";
 	brightness = 0;
+    name = "blue";
 }
 
 light::light(int getBrightness, char* getColor)
