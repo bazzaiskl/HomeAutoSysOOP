@@ -13,7 +13,11 @@ void lineOfColon(){
     for (int i = 0;i<pageWidth;i++){
     cout<<":";
     }
-cout<<endl;
+    cout<<endl;
+}
+
+void blankLine(){
+    cout<<endl;
 }
 
 void title(string message){
@@ -45,6 +49,11 @@ void listOfAppliances(vector<appliance*> list){
 
 void listOfFunctions(appliance* object){
     //list appliance functions name vector
+    cout<<"The Avalible Functions are: "<<endl;
+    for(int i =0; i<(object->getFunctions().size()); i++){
+        cout<<(object->getFunctions().at(i))<<" ";
+    }
+    cout<<endl;
 }
 
 

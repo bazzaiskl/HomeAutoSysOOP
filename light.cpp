@@ -22,3 +22,6 @@ void light::onOff(bool state){
 }
 
 
+vector<string> light::getFunctions(){
+	return functions;
+}

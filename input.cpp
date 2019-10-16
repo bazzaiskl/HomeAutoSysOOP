@@ -8,6 +8,7 @@ using namespace std;
 
 extern void UIAppliance(vector<appliance*> list);
 extern void UIFunction(appliance* object);
+extern void blankLine();
 
 void read(string* input, string message){
  cout<<"Please enter "<<message<<endl;
@@ -15,27 +16,47 @@ void read(string* input, string message){
 
 }
 
-
 void selector(vector<appliance*> list){
+    //variables
     string* UserInput = new string();
     appliance* aSelection;
+    bool choice = 1;
+    //UI functions call list
 
-    UIAppliance(list);
-    read(UserInput, "appliance");
-   
-   for(int i = 0;i<list.size();i++){
-       if((*UserInput).compare((list.at(i)->getName()))==0){
-           //cout<<"on the list"<<endl;
-           aSelection = list.at(i);
+    //appliance selection
+    while(choice){
+        UIAppliance(list);
+        read(UserInput, "appliance"); 
+        if((*UserInput).compare("quit")){break;} 
+        
+        for(int i = 0;i<list.size();i++){
+            if((*UserInput).compare((list.at(i)->getName()))==0){
+                //cout<<"on the list"<<endl;
+                aSelection = list.at(i);
+                choice = 0;
+            }
+        else{
+            cout<<"selection is not availible,"<<endl<< "please try again, or type quit to quit"<<endl;
+            return;
+        }
+    }
+    
+    blankLine();
+    }
+
+   //function selection
+   UIFunction(aSelection);
+   read(UserInput,"function");
+   for(int i=0;i<(aSelection->getFunctions().size()); i++){
+       string currentComp = aSelection->getFunctions().at(i);
+
+       if((*UserInput).compare(currentComp)==0){
+           //need a way to call the functions, maybe an array of function pointers
        }
        else{
-           cout<<"selection is not on the list"<<endl;
+           cout<<"selection is not availible"<<endl;
+           return;
        }
    }
 
-   UIFunction(aSelection);
-   read(UserInput,"function");
-
-
-//cout<<*name<<" is "<<*function<<endl;
 }

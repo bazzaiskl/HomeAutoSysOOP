@@ -19,3 +19,6 @@ void heater::onOff(bool state){
 	cout<<"onOff called"<<endl;
 }
 
+vector<string> heater::getFunctions(){
+	return functions;
+}

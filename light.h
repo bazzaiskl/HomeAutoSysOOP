@@ -14,6 +14,11 @@ public:
 	std::string color;
 	int brightness;
 	void onOff(bool state);
+
+	//need to be added
+	vector<string> getFunctions();
+	vector<string> functions;
+
 };
 
 

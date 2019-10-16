@@ -2,6 +2,7 @@
 #define APPLIANCE_H
 
 #include <string>
+#include<vector>
 
 using namespace std;
 
@@ -22,6 +23,9 @@ public:
 //behviour
     //pure vitruals
     virtual void onOff(bool state) = 0;
+
+    //need to be added
+    virtual vector<string> getFunctions() =0;
 
     //getters
     string getName();
