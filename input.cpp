@@ -25,41 +25,51 @@ void selector(vector<appliance*> list){
 
     //appliance selection
     
-        UIAppliance(list);
+    UIAppliance(list);
 
-        while(choice){
+    while(choice){
         read(UserInput, "appliance");
 
-
         if((*UserInput).compare("quit")==0){return;} 
-        else{
-        for(int i = 0;i<list.size();i++){
-            if((*UserInput).compare((list.at(i)->getName()))==0){
-                //cout<<"on the list"<<endl;
-                aSelection = list.at(i);
-                choice = 0;
-            } else {
+        else {
+            for(int i = 0;i<list.size();i++){
+                if((*UserInput).compare((list.at(i)->getName()))==0){
+                    aSelection = list.at(i);
+                    choice = 0;
+                    } 
+                }
+
+            if(choice == 1){
                 cout<<"selection is not availible,"<<endl<< "please try again, or type quit to quit"<<endl;
-            }
-    }
+                blankLine();
+                }
     
-    blankLine();
-        }
-    }
+            blankLine();
+                }
+            }
 
    //function selection
-   UIFunction(aSelection);
-   read(UserInput,"function");
-   for(int i=0;i<(aSelection->getFunctions().size()); i++){
-       string currentComp = aSelection->getFunctions().at(i);
+    choice = 1;
+    UIFunction(aSelection);
 
-       if((*UserInput).compare(currentComp)==0){
-           //need a way to call the functions, maybe an array of function pointers
-       }
-       else{
-           cout<<"selection is not availible"<<endl;
-           return;
-       }
-   }
+    while(choice){
+        read(UserInput,"function");
+        if((*UserInput).compare("quit")==0){return;}
+        else{
+            for(int i=0;i<(aSelection->getFunctions().size()); i++){
+                string currentComp = aSelection->getFunctions().at(i);
 
+                if((*UserInput).compare(currentComp)==0){
+                    //need a way to call the functions, maybe an array of function pointers
+                    choice = 0;
+                    } 
+                }
+            
+
+                if(choice == 1){
+                    cout<<"selection is not availible,"<<endl<< "please try again, or type quit to quit"<<endl;
+                    blankLine();
+                    }
+                }
+        }
 }
