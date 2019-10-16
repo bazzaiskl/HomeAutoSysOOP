@@ -4,7 +4,12 @@
 heater::heater()
 {
 	temp = 20;
-	name = "?";
+	
+}
+
+heater::heater(string aName){
+	name = aName;
+	temp = 20;
 }
 
 heater::heater(int getTemp)

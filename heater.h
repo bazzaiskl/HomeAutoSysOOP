@@ -7,7 +7,7 @@ class heater: public appliance
 public:
 	heater();
 	heater(int getTemp);
-	string name;
+	heater(string aName);
 	vector<string> functions;
 	
 	int temp;

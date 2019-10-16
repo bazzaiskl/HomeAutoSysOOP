@@ -14,8 +14,8 @@ int main(){
 vector<appliance*> list;
 
 //add appliances into the vector
-list.push_back(new heater());
-list.push_back(new light());
+list.push_back(new heater("hotty"));
+list.push_back(new light("enlightenment"));
 
 
 //run selector

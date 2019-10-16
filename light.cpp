@@ -5,7 +5,13 @@ light::light()
 {
 	color = "?";
 	brightness = 0;
-    name = "blue";
+    
+}
+
+light::light(string aName){
+	color = "?";
+	brightness = 0;
+	name = aName;
 }
 
 light::light(int getBrightness, char* getColor)

@@ -35,6 +35,7 @@ public:
     void setName(string nName);
 
     appliance();
+    appliance(string aName);
 
 };
 #endif

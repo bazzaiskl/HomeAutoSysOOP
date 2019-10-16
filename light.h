@@ -9,7 +9,7 @@ class light: public appliance
 {
 public:
 	light();
-	string name;
+	light(string aName);
 	light(int getBrightness, char* getColor);
 	std::string color;
 	int brightness;

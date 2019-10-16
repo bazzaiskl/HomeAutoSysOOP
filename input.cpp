@@ -24,24 +24,27 @@ void selector(vector<appliance*> list){
     //UI functions call list
 
     //appliance selection
-    while(choice){
+    
         UIAppliance(list);
-        read(UserInput, "appliance"); 
-        if((*UserInput).compare("quit")){break;} 
-        
+
+        while(choice){
+        read(UserInput, "appliance");
+
+
+        if((*UserInput).compare("quit")==0){return;} 
+        else{
         for(int i = 0;i<list.size();i++){
             if((*UserInput).compare((list.at(i)->getName()))==0){
                 //cout<<"on the list"<<endl;
                 aSelection = list.at(i);
                 choice = 0;
+            } else {
+                cout<<"selection is not availible,"<<endl<< "please try again, or type quit to quit"<<endl;
             }
-        else{
-            cout<<"selection is not availible,"<<endl<< "please try again, or type quit to quit"<<endl;
-            return;
-        }
     }
     
     blankLine();
+        }
     }
 
    //function selection
