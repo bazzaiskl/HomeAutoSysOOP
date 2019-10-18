@@ -1,48 +1,76 @@
 #include <string>
 #include <iostream>
+#include "heater.h"
+#include "light.h"
+#include <vector>
 
 using namespace std;
 
-void read(string* name, string* function){
- cout<<"Please enter name of object"<<endl;
- cin >> *name;
+extern void UIAppliance(vector<appliance*> list);
+extern void UIFunction(appliance* object);
+extern void blankLine();
 
- cout<<"please enter the function"<<endl;
- cin >> *function;
+void read(string* input, string message){
+ cout<<"Please enter "<<message<<endl;
+ cin >> *input;
 
 }
 
+void selector(vector<appliance*> list){
+    //variables
+    string* UserInput = new string();
+    appliance* aSelection;
+    bool choice = 1;
+    //UI functions call list
 
-void selector(){
-    string* name = new string();
-    string* function = new string();
-    read(name, function);
-   
-   if ( (*name).compare("heater") == 0 ){
-       if((*function).compare("on") == 0){
-           //call the class funciton of on
-       }
-       if((*function).compare("off") == 0){
-           //call the class funciton of off
-       }
-       
-   }
+    //appliance selection
+    
+    UIAppliance(list);
 
-   if((*name).compare("light") == 0){
-       if((*function).compare("on") == 0){
-           //call the class funciton of on
-       }
-       if((*function).compare("off") == 0){
-           //call the class funciton of off
-       }
+    while(choice){
+        read(UserInput, "appliance");
 
-   }
+        if((*UserInput).compare("quit")==0){return;} 
+        else {
+            for(int i = 0;i<list.size();i++){
+                if((*UserInput).compare((list.at(i)->getName()))==0){
+                    aSelection = list.at(i);
+                    choice = 0;
+                    } 
+                }
 
+            if(choice == 1){
+                cout<<"selection is not availible,"<<endl<< "please try again, or type quit to quit"<<endl;
+                blankLine();
+                }
+    
+            blankLine();
+                }
+            }
 
-cout<<*name<<" is "<<*function<<endl;
+   //function selection
+    choice = 1;
+    UIFunction(aSelection);
+
+    while(choice){
+        read(UserInput,"function");
+        if((*UserInput).compare("quit")==0){return;}
+        else{
+            for(int i=0;i<(aSelection->getFunctions().size()); i++){
+                string currentComp = aSelection->getFunctions().at(i);
+
+                if((*UserInput).compare(currentComp)==0){
+                    //need a way to call the functions, maybe an array of function pointers
+                    //looks like we might need to iff bomb it
+                    choice = 0;
+                    } 
+                }
+            
+
+                if(choice == 1){
+                    cout<<"selection is not availible,"<<endl<< "please try again, or type quit to quit"<<endl;
+                    blankLine();
+                    }
+                }
+        }
 }
-
-
-
-
-

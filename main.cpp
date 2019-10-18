@@ -1,29 +1,26 @@
 #include <iostream>
 #include "heater.h"
 #include "light.h"
-//#include <vector>
+#include <vector>
 
 using namespace std;
 
 extern void read(string* name, string* function);
-extern void selector();
+extern void selector(vector<appliance*> list);
 
 int main(){
 
-heater warmer();
-//heater* warmerP = &warmer;
+//initalize vector of all the appliances
+vector<appliance*> list;
 
-light litBro();
-//appliance* litBroP = &litBro;
-
-//appliance* list[10] = {&warmer, &litBro};
-
+//add appliances into the vector
+list.push_back(new heater("hotty"));
+list.push_back(new light("enlightenment"));
 
 
+//run selector
 
-
-selector();
-
+selector(list);
 
 	
 }
