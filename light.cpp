@@ -1,19 +1,28 @@
 #include <iostream>
 #include "light.h"
+#include "appliance.h"
+#include <string>
+
+
 
 light::light()
 {
-	color = "?";
-	brightness = 0;
+	getColor = "?";
+	getBrightness = 0;
 }
 
-light::light(int getBrightness, char* getColor)
+light::light(std::string color)
 {
-	color = getColor;
-	brightness = getBrightness;
+	getColor=color;
 	
-	std::cout<<"The light color is setted "<< color;
-	std::cout<<" The light brightness is setted"<<brightness<<std::endl;
+	
+	std::cout<<"The light color is setted "<< getColor<<std::endl;
+
 }
 
+void light::set_brightness(int aBrightness)
+{
+	getBrightness=aBrightness;
+	std::cout<<" The light brightness is setted"<<getBrightness<<std::endl;
+}
 

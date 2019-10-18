@@ -9,9 +9,10 @@ class light
 public:
 	light();
 
-	light(int getBrightness, char* getColor);
-	std::string color;
-	int brightness;
+	light(std::string color);
+	std::string getColor;
+	void set_brightness(int aBrightness);
+	int getBrightness;
 };
 
 
