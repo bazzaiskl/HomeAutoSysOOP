@@ -3,6 +3,7 @@
 
 #include <string>
 #include<vector>
+#include<iostream>
 
 using namespace std;
 
@@ -26,7 +27,7 @@ public:
 
     //need to be added
     virtual vector<string> getFunctions() = 0;
-    
+    virtual void caller(string funct) = 0;
 
     //getters
     string getName();

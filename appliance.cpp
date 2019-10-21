@@ -34,5 +34,7 @@ void appliance::setLocation(string nLocation){
     location = nLocation;
 }
 
-
+void appliance::caller(string funct){
+    cout<<"no sub type called"<<endl;
+}
 

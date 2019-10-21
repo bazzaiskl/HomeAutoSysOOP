@@ -11,7 +11,7 @@ public:
 	light();
 	light(string aName);
 
-	void set_color(int color);
+	void set_color(string color);
 	std::string getColor;
 	void set_brightness(int aBrightness);
 	int getBrightness;
@@ -23,6 +23,8 @@ public:
 	void (*functionArray[2])(int);
 
 	vector<std::string>getFunctions();
+
+	void caller(string funct);
 
 	//vector<std::string>functions;
 };

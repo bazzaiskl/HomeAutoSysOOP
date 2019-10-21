@@ -62,6 +62,7 @@ void selector(vector<appliance*> list){
                 if((*UserInput).compare(currentComp)==0){
                     //need a way to call the functions, maybe an array of function pointers
                     //looks like we might need to iff bomb it
+                    aSelection->caller(*UserInput);
                     choice = 0;
                     } 
                 }
